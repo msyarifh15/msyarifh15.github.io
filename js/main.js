@@ -11,7 +11,7 @@ var pushSubscription = {
 var payload = "Here is a payload!";
 
 var options = {
-    gcmAPIKey: 'AAAAGByFHlo:APA91bHONY1xbQzPxD-Ed4ndwBbviesb6TuaIdZHJzsRP6TZlrdN4K6BaRtgdI6l9UptvCw2qJR4bKTfyIsbhsZkes8f6QkvL7r647nOW8770-lOWQjknyiKcc8bXNfiCHjo0ljmFNos',
+    gcmAPIKey: 'AAAAvYjx4UU:APA91bHEhtpiasMcRTnswYglORQ6gSOtXm1JzW0ghVFElKnBYn_MDTw1kdd7NrWTGjPXAbBtopv4VTKuie056MXzb6kZWbekDUTd6HTkmtUfAmhEuGsBkRFMUePf92kW6D98HsUYD9fL',
     TTL: 60
 };
 
