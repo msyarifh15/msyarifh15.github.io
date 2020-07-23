@@ -1,7 +1,7 @@
 {
-    "name" : "In-Football",
-    "short_name" : "In-Football",
-    "description" : "A PWA App for Football Lovers",
+    "name" : "Football Reader",
+    "short_name" : "Football Reader",
+    "description" : "PWA for submission dicoding",
     "start_url" : "index.html",
     "display" : "standalone",
     "background_color" : "#ffffff",
