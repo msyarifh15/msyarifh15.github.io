@@ -48,6 +48,7 @@ function getStandings() {
                             <td>${team.goalDifference}</td>
                             <td>${team.points}</td>
                             <td><img style="width: auto; height: 50px" class="responsive-img" src="${team.team.crestUrl.replace(/^http:\/\//i, 'https://')}" /></td>
+                            <td><a href="./pages/detail.html?id=${team.team.id}"  class="waves-effect light-blue btn">View Detail</a></td>    
                         </tr>
                         `;
                     });
@@ -81,11 +82,13 @@ function getStandings() {
                 <td>${team.goalDifference}</td>
                 <td>${team.points}</td>
                 <td><img style="width: auto; height: 50px" class="responsive-img" src="${team.team.crestUrl.replace(/^http:\/\//i, 'https://')}" /></td>
+                <td><a href="./pages/detail.html?id=${team.team.id}"  class="waves-effect light-blue btn">View Detail</a></td>    
             </tr>
             `;
             });
 
             // Sisipkan elemen tr ke dalam tbody dengan id #postContainer
+            document.getElementById('progress').style.display = 'none'
             document.getElementById("standingContainer").innerHTML = teamHtml;
         })
         .catch(error);
@@ -106,9 +109,11 @@ function getTeamByID() {
                                 <i id="iconFavorite" class="large material-icons">favorite_border</i>
                             </a>
                         </div>
+                        <h5>Information Club Detail</h5>
                         <div class="card" style="padding: 15px">
                             <div class="row">
                                 <div class="col s12 m4 center">
+                                    
                                     <img src="${data.crestUrl.replace(/^http:\/\//i, 'https://')}" width="80%" class="responseive-img" />
                                     </div>
                                     <div class="col s12 m8">
@@ -173,9 +178,11 @@ function getTeamByID() {
                     <i id="iconFavorite" class="large material-icons">favorite_border</i>
                 </a>
             </div>
+            <h5>Information Club Detail</h5>
             <div class="card" style="padding: 15px">
                 <div class="row">
                     <div class="col s12 m4 center">
+                        
                         <img src="${data.crestUrl.replace(/^http:\/\//i, 'https://')}" width="80%" class="responseive-img" />
                         </div>
                         <div class="col s12 m8">
@@ -251,7 +258,7 @@ function getMatchForCompetition() {
                         `;
                         }
                     })
-
+                    
                     document.getElementById("scoreBoardContainer").innerHTML = scoreHtml;
                 })
             }
@@ -281,7 +288,7 @@ function getMatchForCompetition() {
                 `;
             }
         })
-
+        document.getElementById('progress').style.display = 'none'
         document.getElementById("scoreBoardContainer").innerHTML = scoreHtml;
     }).catch(error);
 }
@@ -319,6 +326,7 @@ function getFavoriteClubs() {
             </tr>
             `;
         })
+        document.getElementById('progress').style.display = 'none'
         document.getElementById("favoriteContainer").innerHTML = teamHtml;
     }).catch(error);
 }
