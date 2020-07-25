@@ -11,7 +11,7 @@ const loadNav = () => {
  
     let xhr = new XMLHttpRequest()
     xhr.onreadystatechange = () => {
-        if(xhr.readyState == 4 || xhr.status != 200) return
+        if(xhr.readyState === 4 || xhr.status !== 200) return
 
         //masukan daftar tautan ke menu
         document.querySelectorAll('.topnav, .sidenav')

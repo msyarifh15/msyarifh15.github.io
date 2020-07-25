@@ -1,5 +1,5 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js');
-
+ 
 if (workbox) {
     workbox.loadModule('workbox-strategies');
     console.log('Workbox Berhasil Diload');
@@ -21,6 +21,10 @@ workbox.precaching.precacheAndRoute([{
     },
     {
         url: '/push.js',
+        revision: 1
+    },
+    {
+        url: '/service-worker.js',
         revision: 1
     },
     {
@@ -66,7 +70,6 @@ workbox.routing.registerRoute(
     })
 );
 
-// Menyimpan cache untuk file font selama 1 tahun
 workbox.routing.registerRoute(
     /^https:\/\/fonts\.googleapis\.com/,
     workbox.strategies.cacheFirst({
@@ -83,7 +86,6 @@ workbox.routing.registerRoute(
     })
 );
 
-//Response to Push Notification
 self.addEventListener('push', function(event) {
     var body;
     if (event.data) {
