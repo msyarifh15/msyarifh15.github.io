@@ -5,7 +5,7 @@ const vapidKeys = {
     "privateKey":"2ny6cCKeCbetqVad9KHblUQJi-q0V9MZUhQ0dhMqfCw"
 };
 
-webpush.setVapidDetails(
+webpush.setVapidDetails( 
     'mailto:msyarifh15@gmail.com',
     vapidKeys.publicKey,
     vapidKeys.privateKey

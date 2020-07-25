@@ -2,9 +2,9 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 
 if (workbox) {
     workbox.loadModule('workbox-strategies');
-    console.log('Workbox berhasil dimuat');
+    console.log('Workbox Berhasil Diload');
 } else {
-    console.log('Workbox gagal dimuat');
+    console.log('Workbox Gagal Diload');
 }
 
 workbox.precaching.precacheAndRoute([{
@@ -20,43 +20,40 @@ workbox.precaching.precacheAndRoute([{
         revision: 1
     },
     {
-        url: '/pages/detail.html',
+        url: '/push.js',
         revision: 1
     },
     {
-        url: '/pages/favorite.html',
+        url: '/src/components/nav.html',
         revision: 1
     },
     {
-        url: '/pages/home.html',
+        url: '/src/pages/home.html',
         revision: 1
     },
     {
-        url: '/pages/scoreboard.html',
+        url: '/src/pages/teams.html',
         revision: 1
     },
     {
-        url: '/nav.html',
+        url: '/src/pages/bookmark.html',
+        revision: 1
+    },
+    {
+        url: '/favicon.ico',
         revision: 1
     },
 ]);
 
 workbox.routing.registerRoute(
-    new RegExp('/img/'),
-    workbox.strategies.staleWhileRevalidate({
-        cacheName: 'img'
-    })
-)
-
-workbox.routing.registerRoute(
-    new RegExp('/css/'),
+    new RegExp('/assets/css/'),
     workbox.strategies.staleWhileRevalidate({
         cacheName: 'css'
     })
 )
 
 workbox.routing.registerRoute(
-    new RegExp('/js/'),
+    new RegExp('/assets/js/'),
     workbox.strategies.staleWhileRevalidate({
         cacheName: 'js'
     })
@@ -96,7 +93,7 @@ self.addEventListener('push', function(event) {
     }
     var options = {
       body: body,
-      icon: 'img/icon_512x.png',
+      icon: 'icon512.png',
       vibrate: [100, 50, 100],
       data: {
         dateOfArrival: Date.now(),
