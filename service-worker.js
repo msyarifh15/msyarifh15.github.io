@@ -47,7 +47,9 @@ workbox.precaching.precacheAndRoute([{
         url: '/favicon.ico',
         revision: 1
     },
-]);
+],  {
+        ignoreUrlParametersMatching: [/.*/]
+});
 
 workbox.routing.registerRoute(
     new RegExp('/assets/css/'),

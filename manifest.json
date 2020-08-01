@@ -1,7 +1,7 @@
 {
-    "name": "submission3",
-    "short_name": "submission3",
-    "description": "submission3",
+    "name": "Football Reader",
+    "short_name": "Ball Reader",
+    "description": "this app show you about standing league and football club information",
     "start_url": "/index.html",
     "display": "standalone",
     "background_color": "#82b1ff",
